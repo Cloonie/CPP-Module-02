@@ -9,10 +9,10 @@
 class Fixed
 {
 	private:
+		static const int	_bits = 8;
 
 	public:
 		int					_value;
-		static const int	_bits = 8;
 		Fixed();
 		Fixed(const int _int);
 		Fixed(const float _float);
@@ -39,10 +39,16 @@ class Fixed
 		Fixed operator/(const Fixed& other) const;
 
 		// increment/decrement operators
-		Fixed& operator++();
-		Fixed& operator++();
-		Fixed& operator--();
-		Fixed& operator--();
+		Fixed operator++(void);
+		Fixed operator++(int);
+		Fixed operator--(void);
+		Fixed operator--(int);
+
+		// min max
+		static Fixed& min(Fixed& a, Fixed& b);
+		static const Fixed& min(const Fixed& a, const Fixed& b);
+		static Fixed& max(Fixed& a, Fixed& b);
+		static const Fixed& max(const Fixed& a, const Fixed& b);
 
 };
 

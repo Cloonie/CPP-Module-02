@@ -15,5 +15,12 @@ int	main(void)
 
 	std::cout << Fixed::max( a, b ) << std::endl;
 
-	return 0
+	// Fixed abc(Fixed(5) * Fixed(4));
+
+	// std::cout << abc << std::endl;
+	// std::cout << abc._value << std::endl;
+	// std::cout << ++abc << std::endl;
+	// std::cout << abc._value << std::endl;
+
+	return 0;
 }
